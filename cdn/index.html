@@ -13,11 +13,29 @@
   <div id="app"></div>
   <script type="text/babel">
     class App extends React.Component {
+      state = {
+        name: 'Sarath',
+        age: 23
+      }
+      handleClick(e) {
+        console.log(e.target)
+      }
+      handleMouseOver(e) {
+        console.log(e.pageX)
+      }
+      handleCopy(e) {
+        console.log('dont do this')
+      }
       render() {
         return (
           <div className="app-content">
             <h1>Hey Ninjas</h1>
-            <p>{ Math.random() * 10 }</p>
+            <p>
+              My name is: { this.state.name } and Iam { this.state.age }
+            </p>
+            <button onClick={this.handleClick}>Click</button>
+            <button onMouseOver={this.handleMouseOver}>Hover Me</button>
+            <p onCopy={this.handleCopy}>Copy this text</p>
           </div>
         )
       }
