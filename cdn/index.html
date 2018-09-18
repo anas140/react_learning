@@ -19,7 +19,7 @@
       }
       handleChange = (e) => {
         this.setState({
-          name: e.target.name
+          name: e.target.value
         })
       }
      handleSubmit = (e) => {
@@ -30,7 +30,7 @@
         return (
           <div className="app-content">
             <h1>My name is {this.state.name}</h1>
-            <form onSubmit={handleSubmit}>
+            <form onSubmit={this.handleSubmit}>
               <input type="text" onChange={this.handleChange}/>
               <button>Submit</button>
             </form>
