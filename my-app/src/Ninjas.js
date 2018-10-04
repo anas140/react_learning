@@ -1,4 +1,5 @@
 import React from 'react'
+import './Ninjas.css';
 const Ninjas = ({ninjas, deleteNinja}) => {
     // const ninjaList = ninjas.map(ninja => {
     //     if( ninja.age > 22) {
